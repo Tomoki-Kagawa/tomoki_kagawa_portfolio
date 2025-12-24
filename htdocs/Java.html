@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--ページ内以外の必要事項-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=1280">
+    <title>Tomoki Kagawa's Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <!--ヘッダー-->
+  <body>
+    <header class="clearfix background-color" id="Top">
+      <h1 class="header-left"><a href="./index.php">Tomoki Kagawa's Portfolio</a></h1>
+      <div class="header-right clearfix">
+      <details>
+        <summary><span><p>menu</p></span></summary>
+        <ul class="background-color">
+          <li><a href="./index.php#self-introduction">自己紹介</a></li>
+          <li><a href="./index.php#Archives">過去の記録</a></li>
+          <li><a href="./index.php#gallery">ーギャラリー</a></li>
+          <li><a href="./index.php#training">ー訓練成果</a></li>
+          <li><a href="./index.php#except">ー訓練外成果</a></li>
+          <li><a href="./index.php#Contact">お問い合わせ</a></li>
+        </ul>
+      </details>
+    </header>
+    <div class="empty"></div>
+    <!--成果物-->
+    <div class="container deliverable">
+      <h3>Java・イライラ棒</h3>
+      <p>画像をクリックすることで作成物の動作テスト動画をご覧いただけます。</p>
+      <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio/tree/main/htdocs/Java/ShockMaze" target="_blank" class="git">
+        github</a>からご覧いただけますと幸いです。</p>
+      <p>※動作テストをご視聴の際は、画面の光にご注意ください。</p>
+    </div>
+    <div class="explanatory">
+      <div class="deliverable_img">
+        <a href="./images/Java5.mp4" target="_blank"><img src="./images/Java.png" alt="Java.png" class="Java_img"></a>
+      </div>
+      <div class="text">
+        <h3>・作成期間</h3>
+        <p>　2.5週間(50時間程度)</p>
+        <br>
+        <h3>・作成目的</h3>
+        <p>　今まで学んだ言語を使って成果物をする。</p>
+        <br>
+        <h3>・課題内容</h3>
+        <p>　スマートフォン内臓の加速度センサを扱ったイライラ棒のアプリケーションを作成する。</p>
+        <p>　Androidスマートフォンを傾けることによりボールの操作を行う。</p>
+        <br>
+        <h3>・工夫点</h3>
+        <p>　UIは少なめにし、メニュー画面からの遷移方法がシンプルになるようにした。</p>
+        <p>　ステージは乱数でランダム生成をした。乱数生成時にうまくいかない場合、処理が終わらなくなり処理落ちしてしまう為、乱数生成回数とステージ生成回数に制限をかけてアプリケーションが落ちないようにした。</p>
+        <p>　実際のイライラ棒で失敗した時に電撃が走るのをスマートフォンのバイブレーション機能で再現した。</p>
+        <br>
+        <h3>・操作手順</h3>
+        <p>　スタートボタンを押す→難易度を選ぶ→スタートボタンを押し画面を傾けて操作する→ゴールまたは失敗後に次のページへ→スタートへボタンを押してスタート画面へ</p>
+        <br>
+        <h3>・開発環境</h3>
+        <p>　言語/Java・XML</p>
+        <p>　IDE/Android Studio</p>
+        <p>　使用センサ/加速度センサ・タッチパネル・バイブレーション機能</p>
+        <p>　実行環境/エミュレータ・SO-52C(実機)</p>    
+      </div>
+    </div>
+    <!--フッター-->
+    <footer class="background-color">
+      <p>Copyright &copy; 2025 Tomoki Kagawa</p>
+    </footer>
+    <!--div class="return_top"><a href="#TOP">TOPに戻る</a></div-->
+  </body>
+</html>
+

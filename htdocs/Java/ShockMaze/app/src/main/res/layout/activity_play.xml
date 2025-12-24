@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".playActivity"
+    android:background="@color/gray">
+
+    <TextView
+        android:text="画面を傾けて\n黒点を赤点まで\n移動させて下さい"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <SurfaceView
+        android:id="@+id/gameView"
+        android:layout_marginTop="20dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"/>
+
+    <Button
+        android:id="@+id/gameStart"
+        android:layout_width="500px"
+        android:layout_height="200px"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="50dp"
+        android:onClick="onClick"
+        android:text="START"
+        android:textSize="30sp" />
+
+</LinearLayout>
+
+

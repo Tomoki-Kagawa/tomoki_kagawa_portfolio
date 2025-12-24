@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--ページ内以外の必要事項-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=1280">
+    <title>Tomoki Kagawa's Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <!--ヘッダー-->
+  <body>
+    <header class="clearfix background-color" id="Top">
+      <h1 class="header-left"><a href="./index.php">Tomoki Kagawa's Portfolio</a></h1>
+      <div class="header-right clearfix">
+      <details>
+        <summary><span><p>menu</p></span></summary>
+        <ul class="background-color">
+          <li><a href="./index.php#self-introduction">自己紹介</a></li>
+          <li><a href="./index.php#Archives">過去の記録</a></li>
+          <li><a href="./index.php#gallery">ーギャラリー</a></li>
+          <li><a href="./index.php#training">ー訓練成果</a></li>
+          <li><a href="./index.php#except">ー訓練外成果</a></li>
+          <li><a href="./index.php#Contact">お問い合わせ</a></li>
+        </ul>
+      </details>
+    </header>
+    <div class="empty"></div>
+    <!--成果物-->
+    <div class="container deliverable">
+      <h3>Arduino/C++・ブロック崩し</h3>
+      <p>画像をクリックすることで作成物をご覧いただけます。</p>
+      <p>上の資料が動作テスト動画で下の資料は回路図の拡大画像になっております。</p>
+      <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio/tree/main/htdocs/Arduino_C%2B%2B" target="_blank" class="git">
+        github</a>からご覧いただけますと幸いです。</p>
+    </div>
+    <div class="explanatory">
+      <div class="deliverable_img">
+        <a href="./images/Breakingblocks2.mp4" target="_blank"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
+        <a href="./images/回路図.png" target="_blank"><img src="./images/回路図.png" alt="回路図.png"></a>
+      </div>
+      <div class="text">
+        <h3>・作成期間</h3>
+        <p>　2.5週間(50時間程度)</p>
+        <br>
+        <h3>・作成目的</h3>
+        <p>　今まで学んだ言語を使って成果物を作成する。</p>
+        <p>　学生の頃に勉強の為に買った電子部品だけと限られた中で成果物を作成する。</p>
+        <br>
+        <h3>・課題内容</h3>
+        <p>　センサで動かすブロック崩しを作る。</p>
+        <p>　Arduinoでノイズを除去した脈拍を取り、値が一番高くなった時に圧電スピーカーでビープ音を鳴らし、脈拍データをシリアル通信でubuntuへ送信、C++でグラフを作りつつ、BPMを算出。BPMの速さによって難易度HighかLowをブロック崩しに送り難易度を変更。</p>
+        <p>　OpenCVを使ってWebカメラで顔の認識を行い、顔の位置情報から値を算出し、ブロック崩しに送信してゲームの操作を行う。</p>
+        <br>
+        <h3>・工夫点</h3>
+        <p>　脈拍情報を平滑化でノイズ除去をして、その後のR-R値の誤検知を防ぐように作った。</p>
+        <p>　ArduinoからUbuntuに送られてきた脈拍情報にバッファを持たせて情報が届き切ってから波形に反映させるようにして不完全な情報による波形の崩れを防ぐようにした。</p>
+        <p>　OpenCVを使ってWebカメラで顔の認識を行い画面表示は左右反転させ、コントローラーの境界線を線で区切りブロック崩しの操作性を良くした。</p>
+        <br>
+        <h3>・操作手順</h3>
+        <p>　yarpserverを立てる→センサ類の接続→各プログラムを実行→yarp connectでプログラム間を接続→webカメラに顔が映るように移動→指先を脈拍センサで正常な値が出る様になったらスタートボタンを押す→操作開始</p>
+        <br>
+        <h3>・開発環境</h3>
+        <h4>　脈拍検知</h4>
+        <p>　言語/Arduino</p>
+        <p>　IDE/Arduino IDE</p>
+        <p>　使用部品/Arduino nano・脈拍センサ・圧電スピーカー・LCDディスプレイ</p>
+        <br>
+        <h4>　ブロック崩し・画像処理・脈拍描画</h4>
+        <p>　言語/C++</p>
+        <p>　エディタ/Vim</p>
+        <p>　使用部品/ubuntu環境のPC・Webカメラ</p>
+        <p>　OS/ubuntu</p>
+        <p>　ビルド/CMake</p>
+        <p>　フレームワーク/Qt</p>
+        <p>　ライブラリ/OpenCV</p>
+        <p>　通信プロトコル/YARP</p>
+      </div>
+    </div>
+    <!--フッター-->
+    <footer class="background-color">
+      <p>Copyright &copy; 2025 Tomoki Kagawa</p>
+    </footer>
+    <!--div class="return_top"><a href="#TOP">TOPに戻る</a></div-->
+  </body>
+</html>
+

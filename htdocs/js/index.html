@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript・Piano</title>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--外枠-->
+        <div class="outer_border">
+            <!--実行内容表示-->
+            <div class="sound_name_area">
+                <p class="sound_name">音名</p>
+            </div>
+            <!--鍵盤-->
+            <div class="musical_scale">
+                <div class="C scale">ド</div>
+                <div class="D scale">レ</div>
+                <div class="E scale">ミ</div>
+                <div class="F scale">ファ</div>
+                <div class="G scale">ソ</div>
+                <div class="A scale">ラ</div>
+                <div class="B scale">シ</div>
+            </div>
+            <!--鍵盤シャープ-->
+            <div class="sharp_scale_parent">
+                <div class="sharp_scale_CD">
+                    <div class="sharp_C sharp_scale">#ド</div>
+                    <div class="sharp_D sharp_scale">#レ</div>
+                </div>
+                <div class="sharp_scale_FGA">
+                    <div class="sharp_F sharp_scale">#ファ</div>
+                    <div class="sharp_G sharp_scale">#ソ</div>
+                    <div class="sharp_A sharp_scale">#ラ</div>
+                </div>
+            </div>
+            <!--自動演奏-->
+            <div class="automatic">
+                <div class="playing">自動演奏</div>
+            </div>
+            <!--ボリューム-->
+            <div class="volume">
+                <div class="volume_flex">
+                    <p class="minus">-</p>
+                    <p class="volume_text">volume</p>
+                    <p class="plus">+</p>
+                </div>
+                <input type="range" class="volume_range" value="0.05" min="0" max="1" step="0.01">
+            </div>
+            <!--キーボード入力-->
+            <!--div class="keyboard">
+                <input class="keyboard_input" placeholder="ここをクリックして演奏してください"></input>
+            </div-->
+        </div>
+        <div class="explanation">入力説明<br>キーボード入力：音名<br>
+        s：#ド、d：#レ、g：#ファ、h：#ソ、j：#ラ<br>
+        z：ド、x：レ、c：ミ、v：ファ、b：ソ、n：ラ、m：シ</div>
+        <script src="script.js"></script>
+    </body>
+</html>

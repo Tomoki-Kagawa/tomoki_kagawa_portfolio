@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+/*全体*/
+*{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 0.05em;
+  /*outline: 2px red solid;*/
+}
+/*ヘッダー*/
+.header{
+  top: 0;
+  left: 0;
+  position: fixed;
+  display:flex;
+  /*align-items: center;*/
+  height:50px;
+  width: 100%;
+  background-color: rgba(9, 202, 255, 0.96);
+}
+/*ヘッダー空*/
+.header_empty{
+  content: "";
+  top: 0;
+  left: 0;
+  height:50px;
+  width: 100%;
+}
+/*ヘッダータイトル*/
+.header_left{ 
+  margin-left: 20px;
+  margin-right: auto;
+}
+.header-title{
+  line-height: 50px;
+}
+.header-right{
+  display: flex;
+  margin-left: auto;
+}
+/*ヘッダーメニュー*/
+details{
+  display: flex;
+  height:fit-content;
+  width: fit-content;
+  margin-left: auto;
+  background-color: lightgray;
+}
+/*ハンバーガーメニューの*/
+summary{
+  height: 50px;    
+  font-size:20px;
+  width: 50px; 
+  list-style:none;
+}
+/*ハンバーガーメニューの表示*/
+summary span,
+summary span::before,
+summary span::after
+{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+/*ハンバーガーメニューの真ん中の位置 */
+summary span{
+  margin:25px 12px 25px 12px;
+}
+/* ハンバーガーメニューの上の棒の位置 */
+summary span:before {
+  bottom: 8px;
+}
+/* ハンバーガメニューの下の棒の位置 */
+summary span:after {
+  top: 8px;
+}
+/*ハンバーガーメニューのmenu部分 */
+summary span p{
+  margin-top:5px;
+  margin-left:-8px;
+  font-size: 15px;
+}
+/*ヘッダーメニューの点削除*/
+.header-right li {
+  list-style: none;
+}
+/*ヘッダーのメニューのリンク*/
+.header-right a {
+  /*width: fit-content;*/
+  line-height: 50px;        
+  text-decoration: none;
+  padding: 0 10px;
+  font-size: 20px;
+  width: fit-content;
+}
+/*ヘッダーのリンク*/
+.header-left a{
+  /*width: fit-content;*/
+  line-height: 50px;        
+  text-decoration: none;
+  width: fit-content;
+}
+/*ログ表示*/
+.log{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightseagreen;
+}
+/*エラー表示*/
+.error_log{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+/*フォーム縦並び*/
+.form_flex{
+  display:flex;
+  flex-direction: column;
+  margin: auto;
+  width:320px;
+}
+/*中央表示*/
+.centerdisplay{
+  height: 400px;
+  width: 400px;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  border-radius: 5px;
+}
+.error-message{
+  color: red;
+}
+/*ログイン画面と登録画面のセクションタイトル*/
+.section_title{
+  margin-top: 50px;
+}
+/* ページのタイトル*/
+.pagetitle{
+  text-align: center;
+  background-color: yellow; 
+}
+/*登録フォーム*/
+.management_form{
+  width: 380px;
+  text-align: center;
+  padding: 5px;
+  margin: 30px auto 0;
+  background-color: greenyellow;
+  height: fit-content;
+  border-radius: 5px;
+}
+/*説明文記入欄の大きさ*/
+#product_description{
+  height: 100px;
+  overflow-wrap: break-word;
+}
+/*記入欄の縦並び*/
+.labelsize{
+  display: flex;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.management_form .text_width ,.management_form .input_right{
+  width: 300px;
+}
+/*登録フォームのボタン*/
+.btn{
+    display: flex;
+    width: 200px;
+    margin: 10px auto;
+}
+/*登録済みの表示*/
+table,td,th{
+  text-align: center;
+  border: 1px solid #000;
+  width: fit-content;
+}
+.td_image_display{
+  height: 200px;
+  width: auto;
+}
+/*登録済みの表示*/
+.product_description{
+  width: 300px;
+}
+/*テーブル周り */
+table{
+  margin: 30px auto;
+}
+#gray{
+  background-color: gray;
+}
+/*小計*/
+.total{
+  text-align: right;
+  line-height: 40px;
+  font-size: 30px;
+  margin: 10px auto 10px 0;
+}
+/*カートへ移動*/
+.purchase_form{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin:0;
+}
+/*購入ボタン*/
+.purchase_btn{
+  width: 500px;
+  line-height: 40px;
+  font-size: 30px;
+  background-color: lightcoral;
+  margin: 10px auto 10px 0;
+}
+/* ページのタイトル*/
+.complete_purchase{
+  text-align: center;
+  background-color: lightpink; 
+}
+/*詳細ページ*/
+.detail_display{
+  display: flex;
+  text-align: center;
+  padding: 100px 0 0 100px;
+  margin: 100px auto;
+  height: 500px;
+  width: 800px;
+  background-color: lightcyan;
+  border-radius: 5px;
+}
+/*詳細ページの写真*/
+.image_display{
+  height: 300px;
+  width: auto;
+}
+/*詳細ページのコンテンツ幅*/
+.detail_content{
+  height: 300px;
+  width: 300px;
+}
+
+/*コンテナ*/
+.image_flex{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:start;
+}
+/*リストのコンテナ*/
+.list{
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  border: solid black;
+  background-color: white;
+}
+/*リストの画像*/
+.list img{
+  height: 200px;
+}
+/*リストの空ボックス */
+.list_empty{
+  text-align: center;
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  opacity: 0;
+}
+/*ボタンサイズ*/
+.btn_size{
+  margin:0 auto;
+  width: 100px;
+}
+
+/*空ボックス*/
+.empty_box{
+  content:"";
+  opacity: 0;
+  border: none;
+}

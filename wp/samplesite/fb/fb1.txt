@@ -1,0 +1,128 @@
+お世話になっております。
+WordPress課題の採点結果をお送り致します。
+以下、ご回答となりますので、ご確認の上ご対応お願い致します。
+
+なお、ある箇所を修正したことで、新たな不具合が発生することは多々あります。
+再提出時にはNG個所だけでなく全体を再度見直してください。
+
+====================================================
+
+【全体構造に関して】-----------------
+■格納データについて
+themes直下にはテーマフォルダ「samplesite」を直接格納してください。
+現状は「samplesitephp/samplesite」となっており、WordPress管理画面＞外観でテーマを選択する際にテーマ名が指定通り「samplesite」になっているかも確認してください。
+
+■コードの視認性を意識しましょう
+インデント不足や不要な改行等が目立つので、各ファイルのインデントを整え、改行は適切に使用してください。
+インデントを効果的に使用するとどのコードがどこに属しているか一目でわかるようになり、読みやすく、論理の流れも明瞭になります。
+また、後でコードを見直すときにも、誰かが読んだときにも理解や変更がしやすくなります。長く使うコードほど重要です。
+
+■パンくずリスト用コード
+現状は
+
+        <?php if(function_exists('bcn_display'))
+        {
+        bcn_display();
+        }?>
+
+で各ファイルに記載いただいていますが、
+        <div class="">
+        <?php if(function_exists('bcn_display'))
+        {
+        bcn_display();
+        }?>
+        </div>
+
+カリキュラム指示通り上記のまま挿入してください。
+https://portal.dc-itex.com/programming/wordpress/wp12/
+■テストデータの入力について
+お知らせ、ニュース、プレスリリース、ブログ等の各カテゴリーに対して数記事ずつ投稿し、実際の表示状況を確認してください。
+一覧ページ、詳細ページそれぞれで問題なく記事が取得され、表示できるかを確認した上で提出してください。
+
+【トップページ・各ページに関して】-----------------
+■archive.php
+・8行目の<div id="contents">に対する閉じタグ</div>がありません。開始タグと終了タグは対になるようにしてください。
+・見本にはあった<div id="cont_first" class="container">のdiv枠が無くなっています。基本的な構造は静的ファイルをベースにしてwp用コード書き換え部分以外は構造変更はしないでください。
+
+■category-blog.php
+・2行目の<div id="cont_first" class="container">に対する閉じタグ</div>がありません。開始タグと終了タグは対になるようにしてください。
+・7行目の<div id="contents">に対する閉じタグ</div>がありません。開始タグと終了タグは対になるようにしてください。
+■footer.php
+・15行目：今回の課題ではfooter.phpにsidebar.phpの内容は読み込みません。
+
+■functions.php
+OK
+
+■header.php
+・20行目の
+
+<title>SAMPLE SITE</title>
+
+は21-25行目の
+<?php if ( is_home() || is_front_page() ) : ?>
+    <title><?php bloginfo('name'); ?></title>
+<?php else : ?>
+    <title><?php bloginfo('name'); ?> | <?php wp_title(); ?></title>
+<?php endif; ?>
+
+上記コードに変換するため削除してください。
+https://portal.dc-itex.com/programming/wordpress/wp07/#toc13
+・47行目：<div class="">に対する</div>がありませんが、もともとこちらは不要なコードとなりますので削除してください。（対応する閉じタグが他phpファイルにある場合はそちらも併せてご確認ください。）
+
+■index.php
+INFORMATIONとBLOGの記事取得方法が違います。
+カリキュラム該当ページの「ループ部分の挿入」を参考にしてください。
+【参考】
+https://portal.dc-itex.com/programming/wordpress/wp10/
+
+■page.php
+15行目：
+
+<?php get_sidebar(); ?>
+
+の位置が違います。
+sidebar.phpに記述されている<div id="cont_right">～</div>と<div id="cont_left">～</div>が<div id="contents">で囲われる構造にしてください。
+■page-company.php
+OK
+
+■sidebar.php
+OK
+
+■single.php
+OK
+
+【管理画面の設定・表示画面に関して】-------
+＜リンク設定＞
+■ヘッダーメニュー
+ヘッダーメニューは「TOP／会社概要／サービス概要／プレスリリース／ブログ／お問い合わせ」を表示させてください。
+また、表示順も静的サイト同様に上記のようにしてください。
+
+＜その他設定＞
+■INFORMATION、BLOG記事一覧ページについて
+下記phpファイルの構造不備により、表示崩れが発生しています。
+
+【archive.php】
+https://portfolio02.dc-itex.com/ebina/0003/wp/category/information/
+https://portfolio02.dc-itex.com/ebina/0003/wp/category/pr/
+https://portfolio02.dc-itex.com/ebina/0003/wp/category/news/
+
+現状---＞参考001.png
+
+【category-blog.php】
+https://portfolio02.dc-itex.com/ebina/0003/wp/category/blog/
+
+現状---＞参考002.png
+
+■お問い合わせページ
+お問い合わせ確認メールが届きません。
+こちらでの環境設定やメール自動振り分けによる可能性もあるため、ご自身の環境で送受信問題なく行われているかを再度ご確認いただいても宜しいでしょうか？
+
+■グローバルメニューの設定
+プレスリリース、ブログの２つが抜けています。
+表示順も前述の通り調整してください。
+
+====================================================
+
+以上となります。
+不明点等ございましたらご連絡ください。
+宜しくお願い致します。

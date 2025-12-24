@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".StartActivity"
+    tools:ignore="ExtraText"
+    android:background="@color/gray">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Shock\nMaze"
+        android:textColor="@color/theme"
+        android:shadowColor="@color/black"
+        android:shadowRadius="40"
+        android:textSize="100sp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="171dp"
+        android:onClick="onClick"
+        android:text="Start"
+        android:textSize="50sp" />
+
+</LinearLayout>
+
+
+
+

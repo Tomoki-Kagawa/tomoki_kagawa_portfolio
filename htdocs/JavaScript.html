@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--ページ内以外の必要事項-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=1280">
+    <title>Tomoki Kagawa's Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <!--ヘッダー-->
+  <body>
+    <header class="clearfix background-color" id="Top">
+      <h1 class="header-left"><a href="./index.php">Tomoki Kagawa's Portfolio</a></h1>
+      <div class="header-right clearfix">
+      <details>
+        <summary><span><p>menu</p></span></summary>
+        <ul class="background-color">
+          <li><a href="./index.php#self-introduction">自己紹介</a></li>
+          <li><a href="./index.php#Archives">過去の記録</a></li>
+          <li><a href="./index.php#gallery">ーギャラリー</a></li>
+          <li><a href="./index.php#training">ー訓練成果</a></li>
+          <li><a href="./index.php#except">ー訓練外成果</a></li>
+          <li><a href="./index.php#Contact">お問い合わせ</a></li>
+        </ul>
+      </details>
+    </header>
+    <div class="empty"></div>
+    <!--成果物-->
+    <div class="container deliverable">
+      <h3>JavaScript・ピアノ</h3>
+      <p>画像をクリックすることで作成物をご覧いただけます。</p>
+      <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio/tree/main/htdocs/js" target="_blank" class="git">
+        github</a>からご覧いただけますと幸いです。</p>
+      <p>※動作テストを行う際は、音量にご注意ください。</p>
+    </div>
+    <div class="explanatory">
+      <div class="deliverable_img">
+        <a href="./js/index.html" target="_blank"><img src="./images/js_piano.png" alt="js_piano.png"></a>
+      </div>
+      <div class="text">
+        <h3>・作成期間</h3>
+        <p>　3週間(50時間程度)</p>
+        <br>
+        <h3>・課題内容</h3>
+        <p>　JavaScriptでピアノアプリを作成。</p>
+        <p>　ドレミファソラシと書いてあるボタンを用意し、そのボタンをクリックすると音名表示エリアに音名を1秒表示させる。</p>
+        <p>　自動演奏ボタンを押すときらきら星かチューリップのどちらかをランダムで演奏させる。演奏中止ボタンを押すと自動演奏を止める。</p>
+        <br>
+        <h3>・工夫点</h3>
+        <p>　ボタンを鍵盤を模した作りにしました。</p>
+        <p>　WebAudioAPIを使用して、鍵盤が押された時に音が出る様にしました。また、音量バーでボリュームを変えられるようにしました。</p>
+        <p>　KeyboradEventを使い、キーボードで鍵盤操作できるようにしました。</p>
+        <br>
+        <h3>・操作手順</h3>
+        <p>　音量バーを調整→鍵盤をクリックして演奏</p>
+        <p>　音量バーを調整→自動演奏をクリックして自動演奏→演奏中止をクリックor演奏終了で自動演奏中止</p>
+        <p>　音量バーを調整→z,x,c,v,b,n,m,s,d,g,h,jをキーボード入力</p>
+        <br>
+        <h3>・開発環境</h3>
+        <p>　言語/JavaScript・jQuery・HTML・CSS</p>
+        <p>　API/Web Audio API・Keyboard Event</p>
+        <p>　エディタ/Visual Studio Code</p>
+        <p>　実行環境/Google Chrome</p> 
+      </div>
+    </div>
+    <!--フッター-->
+    <footer class="background-color">
+      <p>Copyright &copy; 2025 Tomoki Kagawa</p>
+    </footer>
+    <!--div class="return_top"><a href="#TOP">TOPに戻る</a></div-->
+  </body>
+</html>
+

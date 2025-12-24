@@ -1,0 +1,790 @@
+@charset "UTF-8";
+
+/*全体*/
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*全て*/
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 0.05em;
+    /*コンテナ確認*/
+    /* outline: 1px red solid; */
+}
+
+/*divタグ*/
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+/*背景色*/
+.background-color{
+    background-color: #6fbfcf;
+}
+
+/*------------------------
+ヘッダー
+------------------------*/
+/*ヘッダーのバーのみ*/
+header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+/*ヘッダーのタイトルの文字*/
+.header-left{
+    width: fit-content;
+    line-height: 80px;
+    margin-left: 20px;
+    float: left;
+    color: #fff;
+    font-size: 32px;
+    display: inline;
+    vertical-align: middle;
+}
+
+/* 頭文字*/
+.header-left::first-letter{
+    color: #FFD966;
+} 
+
+.header-left a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*ヘッダーのメニュー*/
+.header-right{
+    float: right;
+    line-height: 80px;
+}
+
+/*ヘッダーのメニューのリスト*/
+.header-right li {
+    list-style: none;
+    float: left;
+    width: fit-content;
+}
+
+/*ヘッダーのメニューのリンク*/
+.header-right a {
+    line-height: 80px;
+    display: inline;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #FFF;
+    margin: 0 10px;
+    font-size: 25px;
+}
+
+/*floatのクリア*/
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*ヘッダーハンバーガーメニュー*/
+details{
+    display: flex;
+    height:fit-content;
+    width: fit-content;
+    margin-left: auto;
+}
+/*ハンバーガーメニューの大きさ*/
+summary{
+    height: 80px;    
+    width: 80px;
+    font-size:20px;
+    list-style:none;
+}
+/*△印を隠す*/
+summary::-webkit-details-marker {
+    display:none;
+} 
+/*ハンバーガーメニューの表示*/
+summary span,
+summary span::before,
+summary span::after
+{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 30px;
+    border-radius: 3px;
+    background:#FFF;
+    color: #FFF;
+    transition: 0.5s;
+    position: absolute;
+}
+/*ハンバーガーメニューの真ん中の位置 */
+summary span{
+    margin:35px 25px;
+}
+/* ハンバーガーメニューの上の棒の位置 */
+summary span:before {
+    bottom: 8px;
+}
+/* ハンバーガメニューの下の棒の位置 */
+summary span:after {
+    top: 8px;
+}
+.drawer_hidden{
+    display: none;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+details[open] summary span {
+  background: rgba(255, 255, 255, 0);  
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+details[open] summary span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+details[open] summary span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/*ハンバーガーメニューのmenu部分 */
+summary span p{
+    margin-top:-15px; 
+    margin-left:-20px; 
+    font-size: 25px;
+}
+/*ヘッダーメニューの点削除*/
+.header-right li {
+    list-style: none;
+}
+.header-right ul{
+    display: flex;
+    flex-flow: column;
+    border-radius: 0 0 0 3px;
+}
+.empty{
+    height: 80px;
+}
+
+/*メイン画像*/
+.main {
+    height: 40vh;
+    width: 100%;
+    background-image: url('./images/gardens.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*全てのコンテナ幅*/
+.container {
+    display: block;
+    width: 1024px;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*自己紹介・日本語*/
+.intro .Japanese {
+    color: #4B52A7; 
+    width: fit-content;
+    padding: 80px 0 40px;
+    margin: 0 auto;
+    font-size:36px;
+}
+
+/*自己紹介・英語*/
+.intro .English {
+    color: #4B52A7;
+    margin: 0 auto;
+    font-size:18px;
+}
+
+/*文章のコンテナ指定*/
+.self_introduction .explanation {
+    width: 600px;
+    margin: 0 auto 30px;
+}
+
+/*自己紹介文*/
+.self_introduction p {
+    width: 100%;
+    text-align: left;
+    color: #000000;
+    font-size:18px;
+}
+
+/*自己紹介文・太字*/
+.self_introduction .bold {
+    font-size:18px;
+    font-weight: bold;
+}
+
+/*木の画像*/
+.self_introduction img {
+    display: block;
+    width: 600px;
+    margin: 0 auto;
+}
+
+/*------------------------
+好きなもの・趣味・Webサイト
+------------------------*/
+
+/*BOX親*/
+.box-parent {
+    display: flex;
+    align-items: stretch;
+    margin: 40px auto 0;
+    justify-content: space-between;
+}
+
+/*BOX子*/
+.box-child {
+    width: 48%;
+    border-radius: 10px;
+    padding:0 10px;
+}
+
+
+/*h3下線*/
+.box-child h3{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+/*BOX内・日本語*/
+.box-child .Japanese {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/*BOX内・英語*/
+.box-child .English {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+/*BOXのリストの周り*/
+.box-child ul {
+    margin: 20px 0px;
+}
+
+/*BOXのリスト*/
+.box-child li{
+    width: fit-content;
+    text-align: left;
+    font-size:18px;
+    line-height: 30px;
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+/*左のBOX*/
+.box1 li,.box1 a {
+    color: #fff;
+}
+
+/*右のBOX*/
+.box2 li, .box2 a {
+    color: #fff;
+}
+
+/*aタグ要素の高さ合わせ*/
+.box2 a{
+    display: inline-block;
+}
+
+.box-child .etc{
+    list-style: none;
+    margin-left:auto;
+    margin-right:30px;
+}
+.box-child .etc_flex{
+    display: flex;
+}
+/*------------------------
+実装サンプル
+------------------------*/
+
+/*実装サンプル周り*/
+.Sample {
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+/*実装サンプル・日本語*/
+.Sample .Japanese {
+    text-align: center;
+    font-size:36px;
+    color: #4B52A7;
+}
+
+/*実装サンプル・英語*/
+.Sample .English {
+    text-align: center;
+    font-size:18px;
+    color: #4B52A7;
+}
+
+/*------------------------
+ギャラリー
+------------------------*/
+/*ギャラリー見出し*/
+.gallery h3 {
+    text-align: center;
+    font-size:26px;
+    color: #4B52A7;
+    border-bottom: 1px solid #B7B7B7;
+}
+
+/*ギャラリー親コンテナ*/
+.gallery-parent {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 0;
+}
+
+/*ギャラリー子コンテナ*/
+.gallery-child {
+    height: 100%;
+    width: 50%;
+}
+
+/*ギャラリー画像*/
+.gallery-child img {
+    display: block;
+    height: 200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/*ギャラリー見出し*/
+.gallery-child h4 {
+    display: block;
+    line-height: 44px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.gallery-child .theme{
+    vertical-align: middle;
+}
+
+/*ギャラリー文*/
+.gallery-child p {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000000;
+    height: 100%;
+    width: 95%;
+    margin: 4px auto 0;
+}
+
+/*------------------------
+訓練成果
+------------------------*/
+.deliverable{
+    margin: 80px auto 0px;
+}
+.deliverable_flex{
+    display: flex;
+    flex-wrap: nowrap; 
+}
+.deliverable_child{
+    text-align: center;
+    width: 500px;
+    margin:80px auto;
+}
+.deliverable_child .theme{
+    font-size: 32px;
+    color: #fff;
+}
+
+/*見出し*/
+.deliverable h3 {
+    text-align: center;
+    font-size: 26px;
+    color: #4B52A7;
+    margin: 0 auto;
+    border-bottom: 1px solid #B7B7B7;
+}
+.deliverable p {
+    font-size: 18px;
+}
+
+/*訓練成果イメージ*/
+.deliverable_child img{
+    border: 1px solid black;
+}
+#Java a{
+    display: block;
+    width: 100%;
+    border: 1px solid black;
+}
+#Java img{
+    height: 400px;
+     border: none;
+}
+
+/*------------------------
+訓練成果ページ
+------------------------*/
+.explanatory{
+    display: flex;
+    margin:80px 100px;
+}
+.explanatory .deliverable_img{
+    flex: 1;
+}
+.deliverable_img img{
+    border: 1px solid black;
+}
+.deliverable_img .Java_img{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    height: 400px;
+}
+.explanatory .text{
+    flex:2;
+    margin:0 20px;
+}
+.explanatory h3{
+    font-size: 20px;
+    color: #4B52A7;
+}
+.explanatory h4{
+    font-size: 18px;
+}
+.explanatory p{
+    font-size: 18px;
+}
+/*------------------------
+フォーム
+------------------------*/
+/*お問い合わせ・日本語*/
+.form .Japanese {
+    color: #4B52A7;
+    width: fit-content;
+    margin: 0 auto;
+    font-size:36px;
+}
+
+/*お問い合わせ・英語*/
+.form .English {
+    color: #4B52A7;
+    margin: 0 auto;
+    font-size:18px;
+}
+
+/*フォーム親コンテナ*/
+.form-parent {
+    text-align: center;
+    width: 600px;
+    margin: 40px auto 0;
+}
+
+/*フォーム子コンテナ*/
+.form-child {
+    display: flex;
+    flex-flow: column;
+    margin: 20px 0;
+}
+
+/*フォームラベル*/
+.form-child .required{
+    font-size: 18px;
+    width: fit-content;
+    margin: 0 0 10px;
+}
+
+/*フォームラベル*/
+.form-child .not_required{
+    font-size: 18px;
+    width: fit-content;
+    margin: 0 0 10px;
+}
+
+.form-child .label{
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+/*フォームラベルの前*/
+.required::before {
+    background: lightsalmon 0% 0% no-repeat padding-box; 
+    border-radius: 4px;
+    padding: 3px 8px 4px;
+    margin: 0 10px 0 0;
+    content: "必須";
+    font-size: 14px;
+    color: #fff; 
+    display: inline-block;   
+}
+
+/*フォームラベルの前*/
+.not_required::before {
+    background: gray 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    padding: 3px 8px 4px;
+    margin: 0 10px 0 0;
+    content: "任意";
+    font-size: 14px;
+    color: #fff; 
+    display: inline-block;   
+}
+
+/*フォーム入力*/
+.form-child input {
+    border: 1px solid #B7B7B7;
+    border-radius: 10px;
+    height: 40px;
+    width: 600px;
+    padding: 5px;
+}
+
+/*フォーム入力*/
+.form-child textarea {
+    border: 1px solid #B7B7B7;
+    border-radius: 10px;
+    height: 100px;
+    width: 600px;
+    padding: 5px;
+}
+
+/*フォームボタン*/
+.form-parent .button {
+    width: 300px;
+    height: 40px;
+    background: #6fbfcf 0% 0% no-repeat padding-box; 
+    color: #fff;
+    box-shadow: 0px 4px 0px #818694;
+    border-radius: 4px;
+    margin: 20px auto 100px;
+    border: none;
+    font-size: 18px;
+}
+
+.error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 0.2em;
+      display: none;
+}
+
+/*------------------------
+フッター
+------------------------*/
+/*フッター周り*/
+footer {
+    margin-top: auto;
+    height: 120px;
+    width: 100%;
+    bottom:0;
+}
+
+/*フッター文*/
+footer p {
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    font-size:18px;
+}
+
+.return_top{
+    background-color: lightseagreen;
+    position: fixed;
+    border-radius: 5px 5px 0 0;
+    bottom: 0px;
+    right: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 120px;
+}
+
+.return_top a{
+    text-decoration: none;
+    color: #fff;
+    font-size:18px;
+}
+/*------------------------
+スクロール
+------------------------*/
+.scroll
+{
+    scroll-margin-top: 80px;
+}
+
+/*------------------------
+レスポンシブ
+------------------------*/
+
+@media screen and (max-width: 768px) {
+
+    /*ヘッダー高さ*/
+    header {
+        height: 48px;
+    }
+    
+    /*タイトル高さ変更*/
+    .header-left{
+        line-height: 48px;
+        font-size: 20px;
+    }
+    /*ヘッダー・タイトル*/
+    .header-left a{
+        text-decoration: none;
+        color: #fff;
+    }
+    /*ヘッダー・メニュー*/
+    .header-right {
+        line-height: 48px;
+    }
+    /*ヘッダーのメニューのリンク*/
+    .header-right a {
+        line-height: 48px;
+        font-size: 16px;
+    }
+    /*ハンバーガーメニューの大きさ*/
+    summary{
+        height: 48px;    
+        width: 48px;
+    }
+    /*ハンバーガーメニューの表示*/
+    summary span,
+    summary span::before,
+    summary span::after
+    {
+        width: 24px;
+    }
+    /*ハンバーガーメニューの真ん中の位置 */
+    summary span{
+        margin:22px 12px;
+    }
+    /*ハンバーガーメニューのmenu部分 */
+    summary span p{
+        margin-top:-8px;
+        margin-left:-9px;
+        font-size: 15px;
+    }
+    .empty{
+        height: 48px;
+    }
+    /*メイン画像*/
+    .main {
+        height: 100vh;
+        width: 100%;
+        background-image: url('./images/gardens.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    /*全てのコンテナ幅*/
+    .container {
+        width: 90%;
+    }
+    
+    /*BOXタテ並べ*/
+    .box-parent {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        margin-top:35px;
+    }
+
+    /*BOX子コンテナ調整*/
+    .box-child {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /*余白調整*/
+    .Sample {
+        padding-top: 75px;
+    }
+
+    /*ギャラリータテ並べ*/
+    .gallery-parent {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    /*ギャラリー子コンテナ調整*/
+    .gallery-child {
+        width: 100%;
+        margin: 5px auto;
+    }
+    /*ギャラリー要素調整*/
+    .gallery-child img{
+        height: 400px;
+    }
+    /*ギャラリー要素調整*/
+    .gallery-child img, .gallery-child h4, .gallery-child p {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /*ギャラリー文*/
+    .gallery-child p {
+        margin: 3.6px auto 0;
+    }
+    
+    /**/
+    .explanatory{
+        display: flex;
+        margin:80px 50px;
+        flex-flow: column;
+    }
+    .explanatory .text{
+        margin-top:40px;
+    }
+
+    /*余白調整*/
+    .form h3 {
+        margin-top: 75px;
+    }
+
+    /*フォームの幅*/
+    .form-parent{
+        width: 100%;
+    }
+
+    /*フォーム入力の幅*/
+    .form-child input{
+        width: 100%;
+    }
+}

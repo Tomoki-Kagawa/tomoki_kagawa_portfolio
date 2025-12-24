@@ -1,0 +1,159 @@
+/*全体*/
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 0.05em;
+}
+/*body*/
+body{
+    min-width: 1280px;
+}
+/*外枠*/
+.outer_border{
+    height: 300px;
+    width: 600px;
+    margin: 10px 50px;
+    background-color: azure;
+    border-radius: 5px;
+    padding-top: 10px;
+    outline:1px solid black;
+}
+/*実行内容表示エリア*/
+.sound_name_area{
+    height: 50px;
+    width: 400px;
+    background-color: yellow;
+    margin: 0 auto;
+}
+/*実行内容表示*/
+.sound_name{
+    color: black;
+    text-align: center;
+    line-height: 50px;
+}
+/*鍵盤エリア*/
+.musical_scale{
+    display:flex;
+    height: 100px;
+    width:  600px;
+    border-radius: 4px;
+    margin: 10px 0;
+    justify-content: center;
+    color:black;
+}
+/*鍵盤ボタン*/
+.scale{
+    height: 100px;
+    width: 50px;
+    padding:60px 0 0 0;
+    border-radius: 3px;
+    margin: 0 1px;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+    outline: 2px black solid;
+}
+/*鍵盤シャープの枠*/
+.sharp_scale_parent{
+    display:flex;
+    height: 70px;
+    width:  600px;
+    border-radius: 4px;
+    margin: -110px auto 40px auto;
+    justify-content: center;
+    color:black;
+}
+/*鍵盤シャープドとレ*/
+.sharp_scale_CD{
+    display:flex;
+    height: 70px;
+    width:  fit-content;
+    border-radius: 4px;
+    margin: 0px auto 0 146px;
+}
+/*鍵盤シャープファとソとラ*/
+.sharp_scale_FGA{
+    display:flex;
+    height: 70px;
+    width:  fit-content;
+    border-radius: 4px;
+    margin: 0 147px 0 auto;
+}
+/*鍵盤シャープボタン*/
+.sharp_scale{
+    display:flex;
+    height: 70px;
+    width:  20px;
+    font-size: 6px;
+    border-radius: 4px;
+    margin: 0px 15px;
+    padding:60px 0 0 0;
+    justify-content: center;
+    color:white;
+    background-color: black;
+    outline:2px black solid;
+}
+/*自動演奏の枠*/
+.automatic{
+    display:flex;
+    height: 50px;
+    width:  200px;
+    border-radius: 4px;
+    margin: 10px auto;
+    background-color: black;
+}
+/*自動演奏ボタン*/
+.playing{
+    width: 300px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin:0 auto;
+}
+/*ボリューム枠*/
+.volume{
+    width: 600px;
+}
+/*ボリューム枠・横並び*/
+.volume_flex{
+    display:flex;
+    height: 20px;
+    width:  fit-content;
+    border-radius: 4px;
+    margin: 0px auto;
+}
+/*ボリュームのテキスト*/
+.volume_text{
+    width: fit-content;
+    margin:0 250px;
+}
+/*ボリュームの長さ*/
+.volume_range{
+    width: 550px;
+    margin:0 25px;
+}
+.volume .minus ,.volume .plus{
+    font-size: 20px;
+}
+/*キーボード入力の枠*/
+/*.keyboard{
+    height: 30px;
+    width:  300px;
+    margin:0 auto;
+}*/
+/*キーボード入力の入力先*/
+/*.keyboard_input{
+    height: 50px;
+    width:  300px;
+    margin:0 auto;
+    text-align: center;
+    font-size: 16px;
+}*/
+.explanation{
+    width: 600px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 50px;
+}
