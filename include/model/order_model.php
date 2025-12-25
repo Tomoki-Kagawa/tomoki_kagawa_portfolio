@@ -201,7 +201,7 @@ function emailSend($db,$select_data){
   $mail->CharSet = 'utf-8';
   
   //個人情報呼び出し
-  require_once '../../htdocs/PHPMailer/src/config.php';
+  require_once __DIR__ . '/../../htdocs/PHPMailer/src/config.php';
 
   try {
     //購入者様用メール

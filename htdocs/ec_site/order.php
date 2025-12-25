@@ -7,19 +7,19 @@ ob_start();
 // Sessionスタート
 session_start();
 // メールファイルの読み込み
-require_once '../../htdocs/PHPMailer/src/PHPMailer.php';
-require_once '../../htdocs/PHPMailer/src/Exception.php';
-require_once '../../htdocs/PHPMailer/src/SMTP.php';
+require_once __DIR__ . '/../../htdocs/PHPMailer/src/PHPMailer.php';
+require_once __DIR__ . '/../../htdocs/PHPMailer/src/Exception.php';
+require_once __DIR__ . '/../../htdocs/PHPMailer/src/SMTP.php';
 // Constファイル読み込み
-require_once '../../include/config/const.php';
+require_once __DIR__ . '/../../include/config/const.php';
 // Modelファイル読み込み
-require_once '../../include/model/order_model.php';
+require_once __DIR__ . '/../../include/model/order_model.php';
 // 共通ファイル読み込み
-require_once '../../include/utility/common.php';
+require_once __DIR__ . '/../../include/utility/common.php';
 // databaseファイル読み込み
-require_once '../../include/utility/database.php';
+require_once __DIR__ . '/../../include/utility/database.php';
 // Sessionファイル読み込み
-require_once '../../include/utility/cookie_session.php';
+require_once __DIR__ . '/../../include/utility/cookie_session.php';
 // セッション管理
 sessionManagement();
 // データベース接続
@@ -31,6 +31,6 @@ $select_data=listProcess($db);
 //メール送信関数
 emailSend($db,$select_data);
 // Viewファイル読み込み
-include_once '../../include/view/order_view.php';
+include_once __DIR__ . '/../../include/view/order_view.php';
 // バッファー終了
 ob_end_flush();
