@@ -45,6 +45,7 @@ header {
     width: 100%;
     margin: 0 auto;
     display: block;
+    z-index: 1;
 }
 
 /*ヘッダーのタイトルの文字*/
@@ -414,21 +415,37 @@ summary span p{
 ------------------------*/
 .deliverable{
     margin: 80px auto 0px;
+    position: relative;
+    z-index: 0;
+    /* isolation: isolate;  */
 }
 .deliverable_flex{
     display: flex;
     flex-wrap: nowrap; 
 }
+.swiper {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 80px;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;     
+}
+.swiper-button-next,.swiper-button-prev{
+    background-color: lightsalmon; 
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+/*成果物縦並び*/
 .deliverable_child{
     text-align: center;
-    width: 500px;
     margin:80px auto;
 }
 .deliverable_child .theme{
     font-size: 32px;
     color: #fff;
 }
-
 /*見出し*/
 .deliverable h3 {
     text-align: center;
@@ -592,6 +609,11 @@ summary span p{
     margin: 20px auto 100px;
     border: none;
     font-size: 18px;
+}
+#send_btn:active{
+    background: #6fbfcf;
+    box-shadow: 0 0 0 #6fbfcf; 
+    transform: translateY(4px);
 }
 
 .error-message {

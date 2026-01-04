@@ -13,9 +13,12 @@ require_once './PHPMailer/src/SMTP.php';
   <!--ページ内以外の必要事項-->
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=1280">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomoki Kagawa's Portfolio</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </head>
 
   <!--ヘッダー-->
@@ -29,8 +32,9 @@ require_once './PHPMailer/src/SMTP.php';
           <li><a href="#self-introduction">自己紹介</a></li>
           <li><a href="#Archives">過去の記録</a></li>
           <li><a href="#gallery">ーギャラリー</a></li>
-          <li><a href="#training">ー訓練成果</a></li>
-          <li><a href="#except">ー訓練外成果</a></li>
+          <li><a href="#training">ー成果物</a></li>
+          <!-- <li><a href="#training">ー訓練成果</a></li> -->
+          <!-- <li><a href="#except">ー訓練外成果</a></li> -->
           <li><a href="#Contact">お問い合わせ</a></li>
         </ul>
       </details>
@@ -62,7 +66,7 @@ require_once './PHPMailer/src/SMTP.php';
           <ul>
             <li class="eat">食事(寿司・ラーメン)</li>
             <li class="sports">スポーツ(テニス・卓球)</li>
-            <li class="make">モノづくり(<a href="#PC">自作PC</a>・<a href="#arcadecontroller">アーケードコントローラー</a>)</li>
+            <li class="make">モノづくり(<!--a href="#PC"-->自作PC<!--/a-->・<!--a href="#arcadecontroller"-->アーケードコントローラー<!--/a-->)</li>
             <div class="etc_flex"><li class="game">ゲーム(FPS・格闘ゲーム)</li><li class="etc">など</li></div>
           </ul>
         </div>
@@ -70,10 +74,10 @@ require_once './PHPMailer/src/SMTP.php';
         <div class="box2 box-child background-color">
           <h3 class="Japanese">プログラミング経験<br><span class="English">Experiences</span></h3>
           <ul>
-            <li class="C">C/C++（介護ロボット・<a href="#Arduino/C++">ブロック崩し</a>）</li>
-            <li class="Java">Java（Androidアプリ・<a href="#Java">イライラ棒</a>）</li>
-            <li class="JavaScript">JavaScript（<a href="#JavaScript">ピアノアプリ</a>）</li>
-            <div class="etc_flex"><li class="PHP">PHP（<a href="#PHP">EC Site</a>）</li><li class="etc">など</li></div>
+            <li class="C">C/C++（介護ロボット・<!--a href="#Arduino/C++"-->ブロック崩し<!--/a-->）</li>
+            <li class="Java">Java（Androidアプリ・<!--a href="#Java"-->イライラ棒<!--/a-->）</li>
+            <li class="JavaScript">JavaScript（<!--a href="#JavaScript"-->ピアノアプリ<!--/a-->）</li>
+            <div class="etc_flex"><li class="PHP">PHP（<!--a href="#PHP"-->EC Site<!--/a-->）</li><li class="etc">など</li></div>
           </ul>
         </div>
       </div>
@@ -125,36 +129,87 @@ require_once './PHPMailer/src/SMTP.php';
 
     <!--成果物-->
     <div class="deliverable container">
-      <h3 class="scroll" id="training">訓練成果</h3>
+      <h3 class="scroll" id="training">成果物</h3>
       <p>画像をクリックすることで説明ページに移動することが出来ます</p>
       <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
-      <div class="deliverable_child scroll" id="JavaScript">
-        <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
-        <a href="./JavaScript.html"><img src="./images/js_piano.png" alt="js_piano.png"></a>
-      </div>
-      <div class="deliverable_child scroll" id="PHP">
-        <h4 class="background-color"><span class="theme">PHP・EC Site</span></h4>
-        <a href="./PHP.html"><img src="./images/ec_site.png" alt="ec_site.png"></a>
-      </div>
-      <div class="deliverable_child scroll" id="WordPerss">
-        <h4 class="background-color"><span class="theme">Wordpress・Sample Site</span></h4>
-        <a href="./Wordpress.html"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
-      </div>
-      <h3 class="scroll" id="except">訓練外成果</h3>
-      <div class="deliverable_child scroll" id="Arduino/C++">
-        <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
-        <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
-      </div>
-      <div class="deliverable_child scroll" id="Java">
-        <h4 class="background-color"><span class="theme">Java・イライラ棒</span></h4>
-        <a href="./Java.html"><img src="./images/Java.png" alt="Java.png"></a>
-      </div>
-      <div class="deliverable_child scroll" id="arcadecontroller">
-        <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
-        <a href="./Arcadecontroller.html"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
+      <div class="swiper swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">  
+            <div class=" deliverable_child scroll" id="JavaScript">
+              <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
+              <a href="./JavaScript.html"><img src="./images/js_piano.png" alt="js_piano.png"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="deliverable_child scroll" id="PHP">
+              <h4 class="background-color"><span class="theme">PHP・EC Site</span></h4>
+              <a href="./PHP.html"><img src="./images/ec_site.png" alt="ec_site.png"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="deliverable_child scroll" id="WordPerss">
+              <h4 class="background-color"><span class="theme">Wordpress・Sample Site</span></h4>
+              <a href="./Wordpress.html"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
+            </div>
+          </div>
+          <!--h3 class="scroll" id="except">訓練外成果</h3-->
+          <div class="swiper-slide">
+            <div class="deliverable_child scroll" id="Arduino/C++">
+              <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
+              <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="deliverable_child scroll" id="Java">
+              <h4 class="background-color"><span class="theme">Java・イライラ棒</span></h4>
+              <a href="./Java.html"><img src="./images/Java.png" alt="Java.png"></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="deliverable_child scroll" id="arcadecontroller">
+              <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
+              <a href="./Arcadecontroller.html"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        //ループ有効
+        loop: true,
+        //スライドスピード
+        speed: 1000,
+        // ページネーション
+        pagination: {
+          el: ".swiper-pagination"
+        },
+        //3D
+        effect: "coverflow",
+        //マウスつかみ
+        grabCursor: true,
+        //真ん中が主
+        centeredSlides: true,
+        //2枚分表示
+        slidesPerView: 2,
+        coverflowEffect: {
+          rotate: 70,
+          stretch: 10,
+          depth: 50,
+          modifier: 1,
+          slideShadows: false
+        },
+        //ナビボタン
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+        }
+      });
+      </script>
     <?php
     //メール送信
     if(isset($_POST["send_btn"])){
@@ -215,8 +270,8 @@ require_once './PHPMailer/src/SMTP.php';
     <!--フッター-->
     <footer class="background-color">
       <p>Copyright &copy; 2025 Tomoki Kagawa</p>
+      <div class="return_top"> <a href="./index.php">TOPに戻る</a></div>
     </footer>
-    <div class="return_top"> <a href="#TOP">TOPに戻る</a></div>
   </body>
 </html>
 <?php
@@ -228,7 +283,7 @@ function emailSend($name,$email,$inquiry,$impression){
   $subject="PortFolio:".$name."様からお問い合わせです";
   $message=$name."様からお問い合わせです。".PHP_EOL."メールアドレス：".$email.PHP_EOL."お問い合わせ内容：".$inquiry.PHP_EOL."PortFolioを見た感想：".$impression;
   $from_subject="PortFolio:お問い合わせ控え";
-  $from_message=$name."様お問い合わせいただきありがとうございます。".PHP_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
+  $from_message=$name."様お問い合わせいただきありがとうございます。".PH_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
   
   mb_language('Japanese');
   mb_internal_encoding('UTF-8');
