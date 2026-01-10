@@ -68,9 +68,11 @@ autoPlayBtn.click(()=>{
 /*音を出す*/
 for(let i=0; i<7;i++){
     playNoteFns[i]=(playTimerCount)=>{
-        $(noteSelectors[i]).css('background','black');
-        $(noteSelectors[i]).css('color','white');
-        $(noteSelectors[i]).css('outline','2px white solid');
+        $(noteSelectors[i]).css({
+            background:'black',
+            color:'white',
+            outline:'2px black solid'
+        });
         if(!audio)audio=new AudioContext();
         if(audio.state==="suspended")audio.resume();
         let oscillator=audio.createOscillator();
@@ -83,19 +85,22 @@ for(let i=0; i<7;i++){
         oscillator.start();
         //保存
         active_audio[i]=oscillator;
-    
-        setTimeout(()=>{
-            oscillator.stop();
-            stopNoteFns[i]();
-        },playTimerCount);
+        if(playTimerCount>0){
+            setTimeout(()=>{
+                oscillator.stop();
+                stopNoteFns[i]();
+            },playTimerCount);
+        }    
     }
 }
 /*音を出す・シャープ*/
 for(let i=7; i<12;i++){
     playNoteFns[i]=(playTimerCount)=>{
-        $(noteSelectors[i]).css('background','white');
-        $(noteSelectors[i]).css('color','black');
-        $(noteSelectors[i]).css('outline','2px black solid');
+        $(noteSelectors[i]).css({
+            background:'white',
+            color:'black',
+            outline:'2px black solid'
+        });
         if(!audio)audio=new AudioContext();
         if(audio.state==="suspended")audio.resume();
         let oscillator=audio.createOscillator();
@@ -110,10 +115,12 @@ for(let i=7; i<12;i++){
         //保存
         active_audio[i]=oscillator;
 
-        setTimeout(()=>{
-            oscillator.stop();
-            stopNoteFns[i]();
-        },playTimerCount);
+        if(playTimerCount>0){
+            setTimeout(()=>{
+                oscillator.stop();
+                stopNoteFns[i]();
+            },playTimerCount);
+        }
     }
 }
 /*音を止める*/
@@ -128,9 +135,11 @@ for(let i=0; i<7;i++){
         else if(activeNoteCount>1){
             activeNoteCount--;
         }
-        $(noteSelectors[i]).css('background','white');
-        $(noteSelectors[i]).css('color','black');
-        $(noteSelectors[i]).css('outline','2px black solid');
+        $(noteSelectors[i]).css({
+            background:'white',
+            color:'black',
+            outline:'2px black solid'
+        });
     }
 }
 /*音を止める・シャープ*/
@@ -145,9 +154,11 @@ for(let i=7; i<12;i++){
         else if(activeNoteCount>1){
             activeNoteCount--;
         }
-        $(noteSelectors[i]).css('background','black');
-        $(noteSelectors[i]).css('color','white');
-        $(noteSelectors[i]).css('outline','2px black solid');
+        $(noteSelectors[i]).css({
+            background:'black',
+            color:'white',
+            outline:'2px black solid'
+        });
     }
 }
 /*演奏の終わり*/
@@ -216,31 +227,22 @@ const onKeyboardInputDown=(k)=>{
         press_key[sound_name]=true;
         activeNoteCount++;
         noteDisplay.text(noteLabels[sound_name]);
-        playNoteFns[sound_name](10000);
-        press_key[sound_name]=true;
+        playNoteFns[sound_name](0);
     }
 }
 //キーボタン関数
 const onKeyboardInputUp=(k)=>{
     let sound_name = keyBindings[k.code];
     let active_sound = active_audio[sound_name];
-
     if(sound_name===undefined)return;
     if(!active_sound)return;
-    
-    //oscillator.stop();
     if(isAutoPlaying==0&&press_key[sound_name]==true){
-        activeNoteCount++;
-        noteDisplay.text(noteLabels[sound_name]);
-        //setTimeout(()=>active_sound.stop(),100);
         active_sound.stop();
         press_key[sound_name]=false;
         stopNoteFns[sound_name]();
-        noteDisplay.text('音名');
     }
 }
-
-//キーボタン押し込み
-document.addEventListener('keydown', onKeyboardInputDown);
-//キーボタン離し
-document.addEventListener('keyup', onKeyboardInputUp);
+// キーボタン押し込み
+$(document).on('keydown', onKeyboardInputDown);
+// キーボタン離し
+$(document).on('keyup', onKeyboardInputUp);
