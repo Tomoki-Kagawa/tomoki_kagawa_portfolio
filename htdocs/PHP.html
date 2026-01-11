@@ -20,8 +20,6 @@
           <li><a href="#Archives">過去の記録</a></li>
           <li><a href="#gallery">ーギャラリー</a></li>
           <li><a href="#training">ー成果物</a></li>
-          <!-- <li><a href="#training">ー訓練成果</a></li> -->
-          <!-- <li><a href="#except">ー訓練外成果</a></li> -->
           <li><a href="#Contact">お問い合わせ</a></li>
         </ul>
       </details>
@@ -29,8 +27,9 @@
     <div class="empty"></div>
     <!--成果物-->
     <div class="container deliverable">
-      <h3>PHP・EC SITE</h3>
+      <h3>PHP・EC Site</h3>
       <p>画像をクリックすることで作成物をご覧いただけます。</p>
+      <p>上が作成物で下の資料はデータベースのER図の拡大画像が表示されます。</p>
       <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
         <p>MVCモデルで作成しており、includeファイルとhtdocsファイル内のec_siteファイルにコードを分割しております。</p>
@@ -39,26 +38,31 @@
     <div class="explanatory">
       <div class="deliverable_img">
         <a href="./ec_site/index.php" target="_blank"><img src="./images/ec_site.png" alt="ec_site.png"></a>
+        <a href="./images/ER図.png" target="_blank"><img src="./images/ER図.png" alt="ER図.png"></a>
       </div>
       <div class="text">
         <h3>・作成期間</h3>
         <p>　2ヶ月(200時間程度)</p>
         <br>
+        <h3>・作成目的</h3>
+        <p>　新たに学んだ言語で成果物を作成する。</p>
+        <p>　データベースを扱ったプログラムに慣れる。</p>
+        <br>
         <h3>・課題内容</h3>
-        <p>　主にPHPとSQLを使ってECSITEを作成。</pp>
+        <p>　主にPHPとSQLを使ってEC Siteを作成。</pp>
         <p>　ログイン、ユーザー登録、商品管理、商品一覧、ショッピングカート、購入完了を行えるページをそれぞれ作成させる。</p>
-        <p>　データベースを作成し、ECSITEの情報を管理させる。</p>
+        <p>　RDBMS(リレーショナルデータベース)を作成し、EC Siteのユーザー情報や商品情報を管理させる。</p>
         <br>
         <h3>・工夫点</h3>
-        <p>　シンプルですっきりとしたボタンがあまりボタンが多くならないようにした。</p>
-        <p>　商品画像をクリックすることで商品の詳細を表示できる様にしたり、お気に入り登録や表示、購入履歴の表示、個人情報登録、購入完了メールの送信など他のECSITEを参考に機能を追加しました。</p>
+        <p>　シンプルですっきりとしたページ設計を行い、ボタンだらけにならないようにした。</p>
+        <p>　商品画像をクリックすることで商品の詳細を表示できるようにしたり、お気に入り登録や表示、購入履歴の表示、個人情報登録、購入完了メールの送信など他のEC Siteを参考に機能を追加した。</p>
         <br>
         <h3>・閲覧手順</h3>
         <h4>　ユーザーログイン</h4>
         <p>　トップページ→新規登録ページへボタンからユーザーとパスワードを登録→ログイン画面からログイン→右上のメニュータブから各ページへ移動後商品を数量を変更→カートに入れるボタンでカートに入れる→画面右下のカートへ移動ボタンをクリックしカートページへ→右下の購入するボタンを押す→アラート確認→購入完了→右上のメニュータブからログアウト</p>
         <br>
         <h4>　管理者ログイン</h4>
-        <p>　ユーザーとパスワードを「ec_admin」でログインすると管理者としてログインでき、商品購入以外に商品登録も出来ます。</p>
+        <p>　ユーザーとパスワードを「ec_admin」でログインすると管理者としてログインでき、商品購入以外に商品登録も出来る仕様にした。</p>
         <br>
         <h3>・開発環境</h3>
         <p>　言語/PHP・SQL・JavaScript・HTML・CSS</p>
@@ -74,7 +78,6 @@
     <footer class="background-color">
       <p>Copyright &copy; 2025 Tomoki Kagawa</p>
     </footer>
-    <!--div class="return_top"><a href="#TOP">TOPに戻る</a></div-->
   </body>
 </html>
 

@@ -51,7 +51,7 @@ require_once './PHPMailer/src/SMTP.php';
         <div class="explanation">
           <p>　私の名前は、<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。</p>
           <p>　学生の頃は、組み込み技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
-          <p>　まだまだ未熟ですが、学習意欲があり、今後より一層成長出来ればと思っております。</p>
+          <p>　まだまだ未熟ですが、今後より一層成長出来ればと思っております。</p>
           <p>　当ページでは、これまで学習したプログラミング言語で新たに成果物を作成し、まとめました。</p>
           <p>　もしよろしければ、最下部のお問い合わせから、ポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
           <p>　何卒、よろしくお願い致します。</p>
@@ -283,7 +283,7 @@ function emailSend($name,$email,$inquiry,$impression){
   $subject="PortFolio:".$name."様からお問い合わせです";
   $message=$name."様からお問い合わせです。".PHP_EOL."メールアドレス：".$email.PHP_EOL."お問い合わせ内容：".$inquiry.PHP_EOL."PortFolioを見た感想：".$impression;
   $from_subject="PortFolio:お問い合わせ控え";
-  $from_message=$name."様お問い合わせいただきありがとうございます。".PH_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
+  $from_message=$name."様お問い合わせいただきありがとうございます。".PHP_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
   
   mb_language('Japanese');
   mb_internal_encoding('UTF-8');
