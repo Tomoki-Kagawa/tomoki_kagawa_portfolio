@@ -131,7 +131,7 @@ require_once './PHPMailer/src/SMTP.php';
     <div class="deliverable container">
       <h3 class="scroll" id="training">成果物</h3>
       <p>画像をクリックすることで説明ページに移動することが出来ます</p>
-      <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
+      <p>コードは<a href="https://github.com/Tomoki-Kagawa/tomoki_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
       <div class="swiper swiper-container">
         <div class="swiper-wrapper">
