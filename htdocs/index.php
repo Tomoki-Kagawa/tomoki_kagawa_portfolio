@@ -98,7 +98,7 @@ require_once './PHPMailer/src/SMTP.php';
             <img src="./images/marina.jpg" alt="marina.jpg">
           </div>
           <h4 class="background-color"><span class="theme">マリーナベイサンズ</span></h4>
-          <p>　研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象に残りました。旅行先としてとてもおすすめです。</p>
+          <p>　研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象的でした。旅行先としてとてもおすすめです。</p>
         </div>
         <!--画像2-->
         <div class="gallery02 gallery-child">
@@ -122,7 +122,7 @@ require_once './PHPMailer/src/SMTP.php';
             <img src="./images/eel.jpg" alt="eel.jpg">
           </div>
           <h4 class="background-color"><span class="theme">ひつまぶし</span></h4>
-          <p>　食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一番おいしかったです。</p>
+          <p>　食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一度は食べていただきたい一品です。</p>
         </div>
       </div>
     </div>

@@ -784,15 +784,8 @@ footer p {
     .gallery-child p {
         margin: 3.6px auto 0;
     }
-    
-    /**/
-    .explanatory{
-        display: flex;
-        margin:80px 50px;
-        flex-flow: column;
-    }
-    .explanatory .text{
-        margin-top:40px;
+    .deliverable_child .theme{
+        font-size: 15px;
     }
 
     /*余白調整*/
