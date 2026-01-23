@@ -104,7 +104,7 @@ header {
 /*ヘッダーハンバーガーメニュー*/
 details{
     display: flex;
-    height:fit-content;
+    height: fit-content;
     width: fit-content;
     margin-left: auto;
 }
@@ -469,7 +469,7 @@ summary span p{
 }
 #Java img{
     height: 400px;
-     border: none;
+    border: none;
 }
 
 /*------------------------
@@ -698,6 +698,15 @@ footer p {
         line-height: 48px;
         font-size: 16px;
     }
+    /*メニュー1*/
+    details{
+        align-items: flex-end;
+        flex-direction: column;
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        right: 0px;
+    }
     /*ハンバーガーメニューの大きさ*/
     summary{
         height: 48px;    
@@ -779,13 +788,25 @@ footer p {
         width: 80%;
         margin: 0 auto;
     }
-
     /*ギャラリー文*/
     .gallery-child p {
         margin: 3.6px auto 0;
     }
     .deliverable_child .theme{
         font-size: 15px;
+    }
+    /*画像の大きさ変更*/
+    #Java img{
+        height: 200px;
+    }
+    /*成果説明ページ立て並べ*/
+    .explanatory{
+        flex-direction: column;
+        margin: 80px 20px;
+    }
+    .explanatory .deliverable_img{
+        text-align: center;
+        margin-bottom: 80px;
     }
 
     /*余白調整*/
@@ -802,4 +823,9 @@ footer p {
     .form-child input{
         width: 100%;
     }
+    .not_required::before, .required::before {
+        display: block;
+        width: 30px;
+    }
+
 }

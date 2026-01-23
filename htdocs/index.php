@@ -53,7 +53,7 @@ require_once './PHPMailer/src/SMTP.php';
           <p>　学生の頃は、組み込み技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
           <p>　まだまだ未熟ですが、今後より一層成長出来ればと思っております。</p>
           <p>　当ページでは、これまで学習したプログラミング言語で新たに成果物を作成し、まとめました。</p>
-          <p>　もしよろしければ、最下部のお問い合わせから、ポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
+          <p>　もしよろしければ、ページ改善のため、最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
           <p>　何卒、よろしくお願い致します。</p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
@@ -67,7 +67,7 @@ require_once './PHPMailer/src/SMTP.php';
             <li class="eat">食事(寿司・ラーメン)</li>
             <li class="sports">スポーツ(テニス・卓球)</li>
             <li class="make">モノづくり(<!--a href="#PC"-->自作PC<!--/a-->・<!--a href="#arcadecontroller"-->アーケードコントローラー<!--/a-->)</li>
-            <div class="etc_flex"><li class="game">ゲーム(FPS・格闘ゲーム)</li><li class="etc">など</li></div>
+            <div class="etc_flex"><li class="game">ゲーム(FPS・格闘ゲーム)</li></div><div><li class="etc">など</li></div>
           </ul>
         </div>
         <!--box2-->
@@ -77,7 +77,7 @@ require_once './PHPMailer/src/SMTP.php';
             <li class="C">C/C++（介護ロボット・<!--a href="#Arduino/C++"-->ブロック崩し<!--/a-->）</li>
             <li class="Java">Java（Androidアプリ・<!--a href="#Java"-->イライラ棒<!--/a-->）</li>
             <li class="JavaScript">JavaScript（<!--a href="#JavaScript"-->ピアノアプリ<!--/a-->）</li>
-            <div class="etc_flex"><li class="PHP">PHP（<!--a href="#PHP"-->EC Site<!--/a-->）</li><li class="etc">など</li></div>
+            <div class="etc_flex"><li class="PHP">PHP（<!--a href="#PHP"-->EC Site<!--/a-->）</li></div><div><li class="etc">など</li></div>
           </ul>
         </div>
       </div>
