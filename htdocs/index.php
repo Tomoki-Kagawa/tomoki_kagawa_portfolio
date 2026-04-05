@@ -44,16 +44,32 @@ require_once './PHPMailer/src/SMTP.php';
     <!--メイン画像-->
     <div class="main"></div>
 
+    <!--背景アニメーション-->
+    <div class="animation">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <!--自己紹介-->
-    <div class="self_introduction container" id="self-introduction">
+    <div class="self_introduction container scroll" id="self-introduction">
       <div class="intro">
         <h2 class="Japanese">自己紹介<br><span class="English">Self Introduction</span></h2>
         <div class="explanation">
           <p>　私の名前は、<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。</p>
           <p>　学生の頃は、組み込み技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
-          <p>　まだまだ未熟ですが、今後より一層成長出来ればと思っております。</p>
+          <p>　まだまだ未熟ですが、学習意欲があり、今後より一層成長出来ればと思っております。</p>
           <p>　当ページでは、これまで学習したプログラミング言語で新たに成果物を作成し、まとめました。</p>
-          <p>　もしよろしければ、ページ改善のため、最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
+          <p>　もしよろしければ、最下部のお問い合わせから、ポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
           <p>　何卒、よろしくお願い致します。</p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
@@ -67,7 +83,7 @@ require_once './PHPMailer/src/SMTP.php';
             <li class="eat">食事(寿司・ラーメン)</li>
             <li class="sports">スポーツ(テニス・卓球)</li>
             <li class="make">モノづくり(<!--a href="#PC"-->自作PC<!--/a-->・<!--a href="#arcadecontroller"-->アーケードコントローラー<!--/a-->)</li>
-            <div class="etc_flex"><li class="game">ゲーム(FPS・格闘ゲーム)</li></div><div><li class="etc">など</li></div>
+            <div class="etc_flex"><li class="game">ゲーム(FPS・格闘ゲーム)</li><li class="etc">など</li></div>
           </ul>
         </div>
         <!--box2-->
@@ -77,18 +93,18 @@ require_once './PHPMailer/src/SMTP.php';
             <li class="C">C/C++（介護ロボット・<!--a href="#Arduino/C++"-->ブロック崩し<!--/a-->）</li>
             <li class="Java">Java（Androidアプリ・<!--a href="#Java"-->イライラ棒<!--/a-->）</li>
             <li class="JavaScript">JavaScript（<!--a href="#JavaScript"-->ピアノアプリ<!--/a-->）</li>
-            <div class="etc_flex"><li class="PHP">PHP（<!--a href="#PHP"-->EC Site<!--/a-->）</li></div><div><li class="etc">など</li></div>
+            <div class="etc_flex"><li class="PHP">PHP（<!--a href="#PHP"-->EC Site<!--/a-->）</li><li class="etc">など</li></div>
           </ul>
         </div>
       </div>
     </div>
     <!-- 実装サンプル-->
-    <div class="Sample container" id="Archives">
+    <div class="Sample container scroll" id="Archives">
       <h2 class="Japanese">過去の記録<br><span class="English">Archives</span></h2>
-    </div>
+    <!--/div-->
 
     <!--ギャラリー-->
-    <div class="gallery container scroll" id="gallery">
+    <div class="gallery scroll" id="gallery"><!--container-->
       <h3>ギャラリー</h3>
       <!--ギャラリー親-->
       <div class="gallery-parent">
@@ -98,7 +114,7 @@ require_once './PHPMailer/src/SMTP.php';
             <img src="./images/marina.jpg" alt="marina.jpg">
           </div>
           <h4 class="background-color"><span class="theme">マリーナベイサンズ</span></h4>
-          <p>　研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象的でした。旅行先としてとてもおすすめです。</p>
+          <p>　研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象に残りました。旅行先としてとてもおすすめです。</p>
         </div>
         <!--画像2-->
         <div class="gallery02 gallery-child">
@@ -122,16 +138,16 @@ require_once './PHPMailer/src/SMTP.php';
             <img src="./images/eel.jpg" alt="eel.jpg">
           </div>
           <h4 class="background-color"><span class="theme">ひつまぶし</span></h4>
-          <p>　食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一度は食べていただきたい一品です。</p>
+          <p>　食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一番おいしかったです。</p>
         </div>
       </div>
     </div>
 
     <!--成果物-->
-    <div class="deliverable container">
+    <div class="deliverable"><!--container-->
       <h3 class="scroll" id="training">成果物</h3>
       <p>画像をクリックすることで説明ページに移動することが出来ます</p>
-      <p>コードは<a href="https://github.com/Tomoki-Kagawa/tomoki_kagawa_portfolio" target="_blank" class="git">
+      <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
       <div class="swiper swiper-container">
         <div class="swiper-wrapper">
@@ -177,6 +193,7 @@ require_once './PHPMailer/src/SMTP.php';
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
+    </div>
     </div>
     <script>
       const swiper = new Swiper(".swiper", {
@@ -283,7 +300,7 @@ function emailSend($name,$email,$inquiry,$impression){
   $subject="PortFolio:".$name."様からお問い合わせです";
   $message=$name."様からお問い合わせです。".PHP_EOL."メールアドレス：".$email.PHP_EOL."お問い合わせ内容：".$inquiry.PHP_EOL."PortFolioを見た感想：".$impression;
   $from_subject="PortFolio:お問い合わせ控え";
-  $from_message=$name."様お問い合わせいただきありがとうございます。".PHP_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
+  $from_message=$name."様お問い合わせいただきありがとうございます。".PH_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
   
   mb_language('Japanese');
   mb_internal_encoding('UTF-8');
