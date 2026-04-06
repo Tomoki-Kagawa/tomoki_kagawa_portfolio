@@ -51,10 +51,10 @@ require_once './PHPMailer/src/SMTP.php';
         <div class="explanation">
           <p>　私の名前は、<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。</p>
           <p>　学生の頃は、組み込み技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
-          <p>　まだまだ未熟ですが、今後より一層成長出来ればと思っております。</p>
+          <p>　まだまだ未熟なので、今後より一層成長出来ればと思っております。</p>
           <p>　当ページでは、これまで学習したプログラミング言語で新たに成果物を作成し、まとめました。</p>
           <p>　もしよろしければ、ページ改善のため、最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
-          <p>　何卒、よろしくお願い致します。</p>
+          <p>　何卒、よろしくお願いいたします。</p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
       </div>
@@ -172,6 +172,12 @@ require_once './PHPMailer/src/SMTP.php';
               <a href="./Arcadecontroller.html"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
             </div>
           </div>
+          <!--div class="swiper-slide">
+            <div class="deliverable_child scroll" id="VBA">
+              <h4 class="background-color"><span class="theme">VBA・当番表</span></h4>
+              <a href="./VBA.html"><img src="./images/VBA.png" alt="VBA.png"></a>
+            </div>
+          </div-->
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
