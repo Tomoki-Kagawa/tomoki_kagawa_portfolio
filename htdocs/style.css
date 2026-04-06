@@ -229,7 +229,7 @@ header {
 /*ヘッダーハンバーガーメニュー*/
 details{
     display: flex;
-    height:fit-content;
+    height: fit-content;
     width: fit-content;
     margin-left: auto;
 }
@@ -461,22 +461,22 @@ summary span p{
     display: flex;
 }
 /*------------------------
-実装サンプル
+過去の記録
 ------------------------*/
 
-/*実装サンプル周り*/
+/*過去の記録周り*/
 .Sample {
     padding: 80px 0 0;
 }
 
-/*実装サンプル・日本語*/
+/*過去の記録・日本語*/
 .Sample .Japanese {
     text-align: center;
     font-size:36px;
     color: #4B52A7;
 }
 
-/*実装サンプル・英語*/
+/*過去の記録・英語*/
 .Sample .English {
     text-align: center;
     font-size:18px;
@@ -652,7 +652,7 @@ summary span p{
 .form .Japanese {
     color: #4B52A7;
     width: fit-content;
-    margin: 100px auto 0;
+    margin: 100px auto 0; 
     font-size:36px;
 }
 
@@ -775,12 +775,16 @@ footer {
 }
 
 /*フッター文*/
-footer p {
+footer p{ 
     text-align: center;
     color: #fff;
     padding: 20px 0;
     width: 100%;
     font-size:18px;
+}
+
+.ex_footer{
+    margin-top: auto;
 }
 
 .return_top{
@@ -838,6 +842,17 @@ footer p {
         line-height: 48px;
         font-size: 16px;
     }
+    
+    /*メニュー1*/
+    details{
+        align-items: flex-end;
+        flex-direction: column;
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        right: 0px;
+    }
+
     /*ハンバーガーメニューの大きさ*/
     summary{
         height: 48px;    
@@ -924,16 +939,33 @@ footer p {
     .gallery-child p {
         margin: 3.6px auto 0;
     }
+
+
+    .deliverable_child .theme{
+        font-size: 15px;
+    }
+    /*画像の大きさ変更*/
+    #Java img{
+        height: 200px;
+    }
+    /*成果説明ページ立て並べ*/
     
     /**/
     .explanatory{
+        flex-direction: column;
+        margin: 80px 20px;
+/*         
         display: flex;
         margin:80px 10px;
-        flex-flow: column;
+        flex-flow: column; */
     }
-    .explanatory .text{
+    .explanatory .deliverable_img{
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    /* .explanatory .text{
         margin-top:40px;
-    }
+    } */
 
     /*余白調整*/
     .form h3 {
@@ -948,5 +980,9 @@ footer p {
     /*フォーム入力の幅*/
     .form-child input{
         width: 100%;
+    }
+    .not_required::before, .required::before {
+        display: block;
+        width: 30px;
     }
 }

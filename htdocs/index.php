@@ -23,7 +23,7 @@ require_once './PHPMailer/src/SMTP.php';
 
   <!--ヘッダー-->
   <body>
-    <header class="clearfix background-color" id="Top">
+    <header class="clearfix background-color">
       <h1 class="header-left"><a href="./index.php">Tomoki Kagawa's Portfolio</a></h1>
       <div class="header-right clearfix">
       <details>
@@ -39,7 +39,7 @@ require_once './PHPMailer/src/SMTP.php';
         </ul>
       </details>
     </header>
-    <div class="empty"></div>
+    <div class="empty" id="Top"></div>
 
     <!--メイン画像-->
     <div class="main"></div>
@@ -69,7 +69,7 @@ require_once './PHPMailer/src/SMTP.php';
           <p>　学生の頃は、組み込み技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
           <p>　まだまだ未熟ですが、学習意欲があり、今後より一層成長出来ればと思っております。</p>
           <p>　当ページでは、これまで学習したプログラミング言語で新たに成果物を作成し、まとめました。</p>
-          <p>　もしよろしければ、最下部のお問い合わせから、ポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
+          <p>　もしよろしければ、ポートフォリオ改善のため最下部のお問い合わせから、ポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
           <p>　何卒、よろしくお願いいたします。</p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
@@ -114,7 +114,7 @@ require_once './PHPMailer/src/SMTP.php';
             <img src="./images/marina.jpg" alt="marina.jpg">
           </div>
           <h4 class="background-color"><span class="theme">マリーナベイサンズ</span></h4>
-          <p>　研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象に残りました。旅行先としてとてもおすすめです。</p>
+          <p>　研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象的でした。旅行先としてとてもおすすめです。</p>
         </div>
         <!--画像2-->
         <div class="gallery02 gallery-child">
@@ -138,7 +138,7 @@ require_once './PHPMailer/src/SMTP.php';
             <img src="./images/eel.jpg" alt="eel.jpg">
           </div>
           <h4 class="background-color"><span class="theme">ひつまぶし</span></h4>
-          <p>　食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一番おいしかったです。</p>
+          <p>　食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一度はいただきたい一品です。</p>
         </div>
       </div>
     </div>
@@ -147,7 +147,7 @@ require_once './PHPMailer/src/SMTP.php';
     <div class="deliverable"><!--container-->
       <h3 class="scroll" id="training">成果物</h3>
       <p>画像をクリックすることで説明ページに移動することが出来ます</p>
-      <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
+      <p>コードは<a href="https://github.com/Tomoki-Kagawa/tomoki_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
       <div class="swiper swiper-container">
         <div class="swiper-wrapper">
@@ -293,7 +293,7 @@ require_once './PHPMailer/src/SMTP.php';
     <!--フッター-->
     <footer class="background-color">
       <p>Copyright &copy; 2025 Tomoki Kagawa</p>
-      <div class="return_top"> <a href="./index.php">TOPに戻る</a></div>
+      <div class="return_top"> <a href="#Top">TOPに戻る</a></div>
     </footer>
   </body>
 </html>
@@ -306,7 +306,7 @@ function emailSend($name,$email,$inquiry,$impression){
   $subject="PortFolio:".$name."様からお問い合わせです";
   $message=$name."様からお問い合わせです。".PHP_EOL."メールアドレス：".$email.PHP_EOL."お問い合わせ内容：".$inquiry.PHP_EOL."PortFolioを見た感想：".$impression;
   $from_subject="PortFolio:お問い合わせ控え";
-  $from_message=$name."様お問い合わせいただきありがとうございます。".PH_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
+  $from_message=$name."様お問い合わせいただきありがとうございます。".PHP_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
   
   mb_language('Japanese');
   mb_internal_encoding('UTF-8');
