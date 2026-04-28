@@ -34,11 +34,11 @@ div {
     display: block;
     unicode-bidi: isolate;
 }
+
 /*背景色*/
 .background-color{
     background-color: #6fbfcf;
 }
-
 
 /*背景アニメーション*/
 .animation{
@@ -297,6 +297,10 @@ summary span p{
     margin-left:-20px; 
     font-size: 25px;
 }
+/* details[open] summary span p::after{
+    content: 'close';
+} */
+
 /*ヘッダーメニューの点削除*/
 .header-right li {
     list-style: none;
